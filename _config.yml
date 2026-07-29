@@ -1,0 +1,68 @@
+# Site settings
+title: "Agile Development Guide"
+longtitle: "Philips Shanghai R&D Agile Operating Manual"
+author: "Philips Shanghai R&D"
+email: ""
+description: "Agile software development guide for Philips Shanghai R&D Center - integrating industry best practices with Philips PDLM process."
+version: 1.0
+
+# URL settings
+url: "https://lexunliu.github.io"
+baseurl: "/agile-development-guide"
+
+# Theme
+remote_theme: sighingnow/jekyll-gitbook
+
+# Collections - all chapters in one collection
+collections:
+  chapters:
+    output: true
+    sort_by: order
+    permalink: /:collection/:path/
+
+# Sidebar navigation order
+ordered_collections:
+  - chapters
+
+# Table of contents
+toc:
+  enabled: true
+  h_min: 1
+  h_max: 3
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+
+# Page width
+page_width: 800px
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-readme-index
+  - jemoji
+
+# Default front matter for chapters collection
+defaults:
+  - scope:
+      path: ""
+      type: "chapters"
+    values:
+      layout: page
