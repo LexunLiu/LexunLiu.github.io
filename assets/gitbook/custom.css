@@ -1,0 +1,15 @@
+/* Make wide tables horizontally scrollable */
+.body-inner table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 16px;
+}
+
+/* Prevent table cells from collapsing */
+.body-inner table th,
+.body-inner table td {
+    min-width: 100px;
+    white-space: nowrap;
+}
